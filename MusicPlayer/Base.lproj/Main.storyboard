@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aD1-Ei-Uys">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="KNS-rm-ftz">
+            <objects>
+                <tabBarController id="aD1-Ei-Uys" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oH4-TD-kgH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nbl-AC-Xg2" kind="relationship" relationship="viewControllers" id="tFG-4L-J5L"/>
+                        <segue destination="Wlw-3s-xfz" kind="relationship" relationship="viewControllers" id="0J3-9O-3qk"/>
+                        <segue destination="0Rq-wF-Bon" kind="relationship" relationship="viewControllers" id="t7s-a4-79Z"/>
+                        <segue destination="qot-U2-PQD" kind="relationship" relationship="viewControllers" id="R2b-LQ-KDR"/>
+                        <segue destination="Lg1-C5-qkv" kind="relationship" relationship="viewControllers" id="X8u-wB-Ckk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VX9-ea-97J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1527" y="5"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="Azq-vG-tZO">
+            <objects>
+                <viewController id="29V-kN-RGB" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NOP-Pe-UOD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="OYK-Gd-Fxf"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Songs" id="Ead-og-dva"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwr-Hn-NkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-228"/>
+        </scene>
+        <!--Playlists-->
+        <scene sceneID="fzs-Eg-EDM">
+            <objects>
+                <viewController id="xY8-qb-eMv" customClass="PlaylistsViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Playlists" id="nTY-oi-vqn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8YI-CY-iUW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="-1550"/>
+        </scene>
+        <!--PlaylistsNavigationController-->
+        <scene sceneID="Gvj-uJ-OVc">
+            <objects>
+                <navigationController title="PlaylistsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Nbl-AC-Xg2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Playlists" image="icon_tab_playlists_normal.png" selectedImage="icon_tab_playlists_selected.png" id="tgG-sd-WEb"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gcX-bV-tKb">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xY8-qb-eMv" kind="relationship" relationship="rootViewController" id="DZN-eH-dEQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jud-gv-j8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem title="Item" id="O4u-fd-dgI"/>
+                <navigationItem title="Albums" id="KZK-hg-WeC"/>
+            </objects>
+            <point key="canvasLocation" x="-842" y="-1550"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="36n-P0-ESf">
+            <objects>
+                <viewController id="rl9-g7-UeM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ct8-wc-a0R">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="qVT-GN-rHh"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albums" id="Op4-DP-kbz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3W-HT-Xsr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-889"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="iYe-op-yON">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wlw-3s-xfz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" image="icon_tab_albums_normal.png" selectedImage="icon_tab_albums_selected.png" id="Fuo-0Q-2x4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WmV-zb-GHf">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rl9-g7-UeM" kind="relationship" relationship="rootViewController" id="Mje-5N-Uol"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i0O-8p-cSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-607" y="-889"/>
+        </scene>
+        <!--SongsNavigationController-->
+        <scene sceneID="1Wn-tZ-vCm">
+            <objects>
+                <navigationController title="SongsNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="0Rq-wF-Bon" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Songs" image="icon_tab_songs_normal.png" selectedImage="icon_tab_songs_selected.png" id="tYD-et-Tmh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PX4-yc-JAG">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="29V-kN-RGB" kind="relationship" relationship="rootViewController" id="HAq-oN-Plt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="878-Qc-veO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608" y="-227.58620689655174"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="GxK-lW-GWk">
+            <objects>
+                <viewController id="ZrO-yl-kG0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EwE-8P-lT4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="UxV-F4-rQS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="O84-y3-gOR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rzi-h8-Cfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="412" y="429.53523238380814"/>
+        </scene>
+        <!--Lifestyle-->
+        <scene sceneID="o0r-Xq-CpV">
+            <objects>
+                <viewController id="LJ7-S7-y1K" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ji0-u3-Vkg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="SNw-bx-U5n"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lifestyle" id="8gh-9g-jaf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97z-9T-kVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1527" y="754"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="If7-pw-b8A">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qot-U2-PQD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="icon_tab_history_normal.png" selectedImage="icon_tab_history_selected.png" id="q92-yu-4Wh"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="B2C-4y-FXF">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZrO-yl-kG0" kind="relationship" relationship="rootViewController" id="8nl-jH-Db0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Bi-fz-A9Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-271.19999999999999" y="429.53523238380814"/>
+        </scene>
+        <!--Lifestyle-->
+        <scene sceneID="AjG-UR-DYF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lg1-C5-qkv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Lifestyle" image="icon_tab_lifestyle_normal.png" selectedImage="icon_tab_lifestyle_selected.png" id="dFW-hi-Usu"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jRO-I3-wxP">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LJ7-S7-y1K" kind="relationship" relationship="rootViewController" id="mcD-L3-5MZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Av-SK-DrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2190.4000000000001" y="754.72263868065977"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_tab_albums_normal.png" width="34" height="34"/>
+        <image name="icon_tab_albums_selected.png" width="34" height="34"/>
+        <image name="icon_tab_history_normal.png" width="34" height="34"/>
+        <image name="icon_tab_history_selected.png" width="34" height="34"/>
+        <image name="icon_tab_lifestyle_normal.png" width="48" height="34"/>
+        <image name="icon_tab_lifestyle_selected.png" width="34" height="34"/>
+        <image name="icon_tab_playlists_normal.png" width="34" height="34"/>
+        <image name="icon_tab_playlists_selected.png" width="34" height="34"/>
+        <image name="icon_tab_songs_normal.png" width="34" height="34"/>
+        <image name="icon_tab_songs_selected.png" width="34" height="34"/>
+    </resources>
+</document>

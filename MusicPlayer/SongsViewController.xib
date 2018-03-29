@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SongsViewController" customModule="MusicPlayer" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="f0N-tS-gZc" id="rbM-wR-hn7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4yx-Ai-ZNQ">
+                    <rect key="frame" x="10" y="25" width="355" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="6kV-hQ-vDd"/>
+                    </constraints>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f0N-tS-gZc">
+                    <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="f0N-tS-gZc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3Yt-UD-gsR"/>
+                <constraint firstItem="f0N-tS-gZc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="4UR-KX-HJz"/>
+                <constraint firstItem="f0N-tS-gZc" firstAttribute="top" secondItem="4yx-Ai-ZNQ" secondAttribute="bottom" constant="7" id="6ML-hX-SUU"/>
+                <constraint firstItem="f0N-tS-gZc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="IRb-zO-FS9"/>
+                <constraint firstItem="4yx-Ai-ZNQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="IyU-tb-XwK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4yx-Ai-ZNQ" secondAttribute="trailing" constant="10" id="eqr-gp-mKI"/>
+                <constraint firstItem="4yx-Ai-ZNQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="vHB-Jb-P4k"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="78.5" y="53.5"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaylistsViewController" customModule="MusicPlayer" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="U4R-JJ-wFf" id="XqW-Tb-rsW"/>
+                <outlet property="view" destination="ueY-V6-ynN" id="xSp-mP-DWc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ueY-V6-ynN">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hYg-aY-gqh">
+                    <rect key="frame" x="10" y="25" width="300" height="29"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U4R-JJ-wFf">
+                    <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="top" secondItem="iXM-8G-IvX" secondAttribute="top" constant="40" id="1eK-0p-4gR"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="trailing" secondItem="iXM-8G-IvX" secondAttribute="trailing" id="5Mj-YY-XTY"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="bottom" secondItem="iXM-8G-IvX" secondAttribute="bottom" id="AK2-wU-LCh"/>
+                <constraint firstItem="hYg-aY-gqh" firstAttribute="top" secondItem="iXM-8G-IvX" secondAttribute="top" constant="5" id="Lbt-9O-EU0"/>
+                <constraint firstItem="hYg-aY-gqh" firstAttribute="leading" secondItem="iXM-8G-IvX" secondAttribute="leading" constant="10" id="TxN-aq-kmO"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="bottom" secondItem="iXM-8G-IvX" secondAttribute="bottom" id="XQQ-9C-DXu"/>
+                <constraint firstItem="iXM-8G-IvX" firstAttribute="trailing" secondItem="hYg-aY-gqh" secondAttribute="trailing" constant="10" id="efC-ec-zt3"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="trailing" secondItem="iXM-8G-IvX" secondAttribute="trailing" id="n3Y-rf-p2U"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="leading" secondItem="iXM-8G-IvX" secondAttribute="leading" id="yM8-AB-J9f"/>
+                <constraint firstItem="U4R-JJ-wFf" firstAttribute="leading" secondItem="iXM-8G-IvX" secondAttribute="leading" id="zgg-aK-SLa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="iXM-8G-IvX"/>
+        </view>
+    </objects>
+</document>
