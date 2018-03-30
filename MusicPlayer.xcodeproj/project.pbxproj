@@ -136,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				9748113420122A7000F804C1 /* AlbumsStoryboard.storyboard */,
-				974811172012175000F804C1 /* img */,
+				974811172012175000F804C1 /* images */,
 				974810E920120A4B00F804C1 /* AppDelegate.swift */,
 				974810EB20120A4B00F804C1 /* ViewController.swift */,
 				974810ED20120A4B00F804C1 /* Main.storyboard */,
@@ -173,7 +173,7 @@
 			path = MusicPlayerUITests;
 			sourceTree = "<group>";
 		};
-		974811172012175000F804C1 /* img */ = {
+		974811172012175000F804C1 /* images */ = {
 			isa = PBXGroup;
 			children = (
 				974811182012178300F804C1 /* icon_tab_albums_normal@2x.png */,
@@ -187,7 +187,7 @@
 				974811212012178300F804C1 /* icon_tab_songs_normal@2x.png */,
 				9748111D2012178300F804C1 /* icon_tab_songs_selected@2x.png */,
 			);
-			path = img;
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
