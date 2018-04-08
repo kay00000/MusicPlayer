@@ -10,6 +10,13 @@ import UIKit
 
 class SongTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var songArtWork: UIImageView!
+    
+    @IBOutlet weak var songName: UILabel!
+    
+    @IBOutlet weak var artistName: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +26,12 @@ class SongTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func commonInit(_ imageName: String, title: String){
+        //        playlistArtWork.image = UIImage(named: imageName)
+        print(title)
+        self.songName?.text = title
     }
     
 }

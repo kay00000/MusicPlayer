@@ -8,8 +8,42 @@
 
 import UIKit
 
-class PlaylistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class PlaylistsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        if pickerView === self.playlistPicker {
+            return 1
+        } else if pickerView === self.musicPicker {
+            return 1
+        } else {
+            return 1
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView === self.playlistPicker {
+            return self.playlists.count
+        } else if pickerView === self.musicPicker {
+            return self.currentSongList.count
+        } else {
+            return 1
+        }
+    }
+    
 
+    //MARK: - privateプロパティ
+    private let musicDataController = MusicDataController.shared
+    private var playlists: Array<PlaylistItem> = []
+    private var currentSongList: Array<SongItem> = []
+    private var currentPlaylistId: Int = 0
+    private var selectedSongId: Int = 0
+    
+    private var songChanged: Bool = false
+    
+    @IBOutlet weak var playlistPicker: UIPickerView!
+    @IBOutlet weak var musicPicker: UIPickerView!
+    @IBOutlet weak var sortTypeControl: UISegmentedControl!
+    
     @IBOutlet weak var tableView: UITableView!
     
     var elements = ["playlist1","playlist2","playlist3","playlist4","playlist5","playlist6"]
@@ -19,6 +53,8 @@ class PlaylistsViewController: UIViewController, UITableViewDelegate, UITableVie
         
         tableView?.dataSource = self
         tableView?.delegate = self
+        
+        self.playlists = musicDataController.getPlaylists(sortType: MusicDataController.SortType.DEFAULT, sortOrder: MusicDataController.SortOrder.ASCENDING)
         
         let nib = UINib(nibName:"PlaylistTableViewCell", bundle: nil)
         tableView?.register(nib, forCellReuseIdentifier: "PlaylistCell")
@@ -34,7 +70,11 @@ class PlaylistsViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlaylistCell", for:indexPath) as! PlaylistTableViewCell
-        cell.commonInit("", title: elements[indexPath.row])
+//        for playlist:PlaylistItem in self.playlists{
+//            print("\(playlist.id):\(playlist.title)")
+//        }
+
+        cell.commonInit("", title: self.playlists[indexPath.row].title)
         
         return cell
     }
@@ -51,7 +91,42 @@ class PlaylistsViewController: UIViewController, UITableViewDelegate, UITableVie
         return 65
     }
     
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let SongTable = SongsViewController()
+        self.navigationController?.pushViewController(SongTable, animated: true)
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    @objc func setPlaylist() {
+        self.playlists = musicDataController.getPlaylists(sortType: MusicDataController.SortType.TITLE, sortOrder: MusicDataController.SortOrder.ASCENDING)
+        
+        self.playlistPicker.delegate = self
+        self.playlistPicker.dataSource = self
+        
+        self.playlistPicker.selectRow(0, inComponent: 0, animated: true)
+        
+        self.currentPlaylistId = self.playlists[self.currentPlaylistId].id
+        
+        self.setMusicFromPlaylist(playlistId: self.currentPlaylistId)
+    }
+    
+    func setMusicFromPlaylist(playlistId: Int) {
+        let sortType:MusicDataController.SortType = musicDataController.SortTypeListSong[self.sortTypeControl.selectedSegmentIndex]
+        
+//        let test = musicDataController.getPlayingHistory()
+        
+        //プレイリスト内の曲の取得
+        self.currentSongList = musicDataController.getSongsWithPlaylist(id: playlistId, sortType: sortType)
+        
+        self.musicPicker.dataSource = self
+        self.musicPicker.delegate = self
+        
+        self.selectedSongId = 0
+        self.musicPicker.selectRow(0, inComponent: 0, animated: true)
+        
+        songChanged = true
+    }
+    
     /*
     // MARK: - Navigation
 
