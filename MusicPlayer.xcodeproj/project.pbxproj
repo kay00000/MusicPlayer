@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		971545A7207A4A1700E3EDAA /* Realm in Resources */ = {isa = PBXBuildFile; fileRef = 971545A6207A4A1700E3EDAA /* Realm */; };
-		971545A9207A4A8B00E3EDAA /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971545A8207A4A8B00E3EDAA /* Realm.framework */; };
-		971545AA207A4A8B00E3EDAA /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 971545A8207A4A8B00E3EDAA /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		971545AD207A4AA300E3EDAA /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971545AC207A4AA300E3EDAA /* RealmSwift.framework */; };
-		971545AE207A4AA300E3EDAA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 971545AC207A4AA300E3EDAA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		971939B920AAFC00003A8F98 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971939B520AAFBE6003A8F98 /* Realm.framework */; };
+		971939BA20AAFC00003A8F98 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 971939B520AAFBE6003A8F98 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		971939BB20AAFC06003A8F98 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 971939B620AAFBE9003A8F98 /* RealmSwift.framework */; };
+		971939BC20AAFC06003A8F98 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 971939B620AAFBE9003A8F98 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		974810EA20120A4B00F804C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974810E920120A4B00F804C1 /* AppDelegate.swift */; };
 		974810EC20120A4B00F804C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974810EB20120A4B00F804C1 /* ViewController.swift */; };
 		974810EF20120A4B00F804C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974810ED20120A4B00F804C1 /* Main.storyboard */; };
@@ -40,7 +39,6 @@
 		97D53178206F3CE8007B875F /* MusicDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D53172206F3CE7007B875F /* MusicDataController.swift */; };
 		97D53179206F3CE8007B875F /* MPMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D53173206F3CE7007B875F /* MPMusicController.swift */; };
 		97D5317A206F3CE8007B875F /* MusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D53174206F3CE8007B875F /* MusicController.swift */; };
-		97D5317B206F3CE8007B875F /* MusicPlayer in Resources */ = {isa = PBXBuildFile; fileRef = 97D53175206F3CE8007B875F /* MusicPlayer */; };
 		97D5317C206F3CE8007B875F /* CustomUISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D53176206F3CE8007B875F /* CustomUISegmentedControl.swift */; };
 		97D5317D206F3CE8007B875F /* MusicItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D53177206F3CE8007B875F /* MusicItem.swift */; };
 		D614DCDE204E64DD00A014D1 /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D614DCDC204E64DD00A014D1 /* PlaylistTableViewCell.swift */; };
@@ -65,14 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		971545AB207A4A8B00E3EDAA /* Embed Frameworks */ = {
+		97BDDEF320A6DFC100EED8B0 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				971545AE207A4AA300E3EDAA /* RealmSwift.framework in Embed Frameworks */,
-				971545AA207A4A8B00E3EDAA /* Realm.framework in Embed Frameworks */,
+				971939BC20AAFC06003A8F98 /* RealmSwift.framework in Embed Frameworks */,
+				971939BA20AAFC00003A8F98 /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,9 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		971545A6207A4A1700E3EDAA /* Realm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Realm; sourceTree = "<group>"; };
-		971545A8207A4A8B00E3EDAA /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = "MusicPlayer/Realm/swift-4.0.2/Realm.framework"; sourceTree = "<group>"; };
-		971545AC207A4AA300E3EDAA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "MusicPlayer/Realm/swift-4.0.2/RealmSwift.framework"; sourceTree = "<group>"; };
+		971939B520AAFBE6003A8F98 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		971939B620AAFBE9003A8F98 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		974810E620120A4B00F804C1 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974810E920120A4B00F804C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		974810EB20120A4B00F804C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,8 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				971545AD207A4AA300E3EDAA /* RealmSwift.framework in Frameworks */,
-				971545A9207A4A8B00E3EDAA /* Realm.framework in Frameworks */,
+				971939BB20AAFC06003A8F98 /* RealmSwift.framework in Frameworks */,
+				971939B920AAFC00003A8F98 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,11 +148,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		971939B420AAFBAB003A8F98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				971939B520AAFBE6003A8F98 /* Realm.framework */,
+				971939B620AAFBE9003A8F98 /* RealmSwift.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		974810DD20120A4B00F804C1 = {
 			isa = PBXGroup;
 			children = (
-				971545AC207A4AA300E3EDAA /* RealmSwift.framework */,
-				971545A8207A4A8B00E3EDAA /* Realm.framework */,
+				971939B420AAFBAB003A8F98 /* Frameworks */,
 				974810E820120A4B00F804C1 /* MusicPlayer */,
 				974810FD20120A4C00F804C1 /* MusicPlayerTests */,
 				9748110820120A4C00F804C1 /* MusicPlayerUITests */,
@@ -176,7 +181,6 @@
 		974810E820120A4B00F804C1 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				971545A6207A4A1700E3EDAA /* Realm */,
 				97D53176206F3CE8007B875F /* CustomUISegmentedControl.swift */,
 				97D53173206F3CE7007B875F /* MPMusicController.swift */,
 				97D53174206F3CE8007B875F /* MusicController.swift */,
@@ -249,7 +253,7 @@
 				974810E220120A4B00F804C1 /* Sources */,
 				974810E320120A4B00F804C1 /* Frameworks */,
 				974810E420120A4B00F804C1 /* Resources */,
-				971545AB207A4A8B00E3EDAA /* Embed Frameworks */,
+				97BDDEF320A6DFC100EED8B0 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,11 +365,9 @@
 				9748112F20121EB200F804C1 /* PlaylistsViewController.xib in Resources */,
 				97C20FE2206D048900F89094 /* SongTableViewCell.xib in Resources */,
 				9748112B2012178300F804C1 /* icon_tab_songs_normal@2x.png in Resources */,
-				971545A7207A4A1700E3EDAA /* Realm in Resources */,
 				974811272012178300F804C1 /* icon_tab_songs_selected@2x.png in Resources */,
 				97C20FDE2066A53700F89094 /* SongsViewController.xib in Resources */,
 				974811252012178300F804C1 /* icon_tab_playlists_selected@2x.png in Resources */,
-				97D5317B206F3CE8007B875F /* MusicPlayer in Resources */,
 				D614DCDF204E64DD00A014D1 /* PlaylistTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,15 +582,15 @@
 				DEVELOPMENT_TEAM = D6VEE7D8UJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MusicPlayer/Realm/swift-4.0.2",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kay00000.musicplayer;
+				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -600,15 +602,15 @@
 				DEVELOPMENT_TEAM = D6VEE7D8UJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/MusicPlayer/Realm/swift-4.0.2",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = MusicPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kay00000.musicplayer;
+				PRODUCT_BUNDLE_IDENTIFIER = "-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

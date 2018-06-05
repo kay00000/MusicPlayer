@@ -74,7 +74,11 @@ class PlaylistsViewController: UIViewController, UIPickerViewDataSource, UIPicke
 //            print("\(playlist.id):\(playlist.title)")
 //        }
 
-        cell.commonInit("", title: self.playlists[indexPath.row].title)
+        if(self.playlists[indexPath.row].artwork == nil) {
+            cell.commonInit(nil, title: self.playlists[indexPath.row].title)
+        }else{
+            cell.commonInit(self.playlists[indexPath.row].artwork!, title:self.playlists[indexPath.row].title)
+        }
         
         return cell
     }

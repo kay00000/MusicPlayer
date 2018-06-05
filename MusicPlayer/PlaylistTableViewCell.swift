@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class PlaylistTableViewCell: UITableViewCell {
+class PlaylistTableViewCell: UITableViewCell{
 
-    @IBOutlet weak var playlistArtWork:  UIImageView!
+    @IBOutlet weak var playlistArtWork:  MPMediaItemArtwork?
     
     @IBOutlet weak var playlistTitle: UILabel!
     
@@ -38,10 +39,11 @@ class PlaylistTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func commonInit(_ imageName: String, title: String){
+    func commonInit(_ imageName: MPMediaItemArtwork, title: String){
 //        playlistArtWork.image = UIImage(named: imageName)
         print(title)
         self.playlistTitle?.text = title
+        self.playlistArtWork = imageName
     }
     
 }
